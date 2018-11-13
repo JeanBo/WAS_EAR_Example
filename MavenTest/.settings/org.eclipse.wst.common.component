@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="MavenTest">
+        <wb-resource deploy-path="/" source-path="/" tag="defaultRootSource"/>
+        <dependent-module archiveName="MavenTestWeb.war" deploy-path="/" handle="module:/resource/MavenTestWeb/MavenTestWeb">
+            <dependent-object>Module_1542096200056</dependent-object>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="MavenTestClient.jar" deploy-path="/" handle="module:/resource/MavenTestClient/MavenTestClient">
+            <dependent-object>Module_1542096200057</dependent-object>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="MavenTestEJB.jar" deploy-path="/" handle="module:/resource/MavenTestEJB/MavenTestEJB">
+            <dependent-object>Module_1542096200058</dependent-object>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="MavenTestConnector.rar" deploy-path="/" handle="module:/resource/MavenTestConnector/MavenTestConnector">
+            <dependent-object>Module_1542096200059</dependent-object>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+    </wb-module>
+</project-modules>

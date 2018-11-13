@@ -1,0 +1,26 @@
+**/*.class
+.jazz*
+.metadata
+.jazz5
+REL2_DC_AUDIT
+IAAAccount/doc
+IAACommon/doc
+"IAACommon/Latest Release COMMON 0.8 Jars"
+IAACommunication/doc
+IAAFinTx/doc
+IAAIntermediary/doc
+IAAParty/doc
+IAARating/docs
+SITS/doc
+SRS/doc
+SRS/Release2doc
+**/WebContent/WEB-INF/classes
+
+_*_Stub.java
+_EJSRemote*_*.java
+EJS*_*.java
+Concrete*_*.java
+**/DB2UDBNT_V82_1/*
+ibm_ejbext.properties
+ibm_pmbab.properties
+/TEMP
