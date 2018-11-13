@@ -7,6 +7,6 @@
 
 <form action="hello" method="post">
     <input type="submit" name="myButton" value="button1" />
-</form
->
+</form>
+
 </html>
