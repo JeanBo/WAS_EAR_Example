@@ -3,11 +3,15 @@ package za.co.liberty.test.servlet;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import za.co.liberty.test.view.HelloBeanLocal;
 
 @WebServlet("/hello")
 public class IndexServlet extends HttpServlet {
@@ -31,8 +35,23 @@ public class IndexServlet extends HttpServlet {
 		PrintWriter writer = response.getWriter();
 		writer.println("<html>");
 		writer.println("<h1>Button 1 was clicked</h1>");
-		
+		String answer = callHelloBean("button1");
+		writer.println("<p>Called bean and returned " + answer + "</p>");
 		writer.println("</html>");
+	}
+
+	private String callHelloBean(String string) {
+		
+		try {
+			InitialContext ic = new InitialContext();
+			HelloBeanLocal local =  (HelloBeanLocal) ic.lookup("ejblocal:za.co.liberty.test.view.HelloBeanLocal");
+			return (local.testMe(string))?"Call succeeded" : "Call returned false";
+		} catch (NamingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return "ERR: " + e.getMessage();
+		}
+		
 	}
 
 }
